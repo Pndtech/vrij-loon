@@ -10,4 +10,4 @@ npm-debug.log
 .tmp
 
 # Nuxt generate
-dist
+#dist
