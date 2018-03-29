@@ -1,0 +1,31 @@
+{
+  "name": "vrij-loon",
+  "homepage": "",
+  "authors": [
+    "Pndtech BV <opensource@pndtech.nl>"
+  ],
+  "description": "Bereken en maak uw eigen loonstaten &amp; loonstroken",
+  "main": "dist/vrij-loon.single.html",
+  "license": "GPL-3.0",
+  "keywords": [
+    "salaris",
+    "loonstaat",
+    "loonstrook"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "teamdf/jquery-number": "^2.1.6",
+    "jsrender": "^0.9.83",
+    "bootstrap": "^3.3.7",
+    "jszip": "^3.1.3",
+    "file-saver": "filesaver#^1.3.3",
+    "taffy": "*",
+    "chart.js": "^2.5.0"
+  }
+}

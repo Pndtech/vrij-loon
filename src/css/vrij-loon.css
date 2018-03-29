@@ -1,0 +1,206 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 50px;
+}
+
+
+/*
+ * Global add-ons
+ */
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .sidebar {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 51px;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        padding: 20px;
+        overflow-x: hidden;
+        overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+        background-color: #f5f5f5;
+        border-right: 1px solid #eee;
+    }
+}
+
+.drowdown-menu > li > span {
+    margin: 3px 20px;
+}
+
+/* Sidebar navigation */
+.sidebar h4 > a {
+    color: #000;
+}
+
+.sidebar h4 > small > a > i {
+    color: #337ab7;
+}
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+
+.nav-sidebar > li {
+    background-color: #e8e8e8;
+}
+
+.nav-sidebar > li.header {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    border-top: solid 1px #9f9f9f;
+    border-bottom: solid 1px #9f9f9f;
+    background-color: transparent;
+    font-weight: 600;
+}
+
+.nav-sidebar > li.header:first-child {
+    border-top: 0px;
+    padding-top: 10px;
+}
+
+.nav-sidebar > li:last-child {
+    border-bottom: solid 1px #9f9f9f;
+}
+
+.nav-sidebar > li > span {
+    margin-top: 0px;
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+
+.nav-sidebar > li > a {
+    padding-top: 3px;
+    padding-right: 25px;
+    padding-left: 30px;
+    padding-bottom: 0px;
+}
+
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+    color: #fff;
+    background-color: #f5f5f5;
+}
+
+.nav-sidebar > .active > a:hover {
+    cursor: pointer;
+}
+
+/*
+ * Main content
+ */
+
+.main {
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .main {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+
+.main .page-header {
+    margin-top: 0;
+}
+
+.page {
+    position: relative;
+}
+
+#loonstaat hr.divider {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#loonstaat .row .row small {
+    color: #777;
+}
+
+#loonstrook table th,
+#loonstrook table td {
+    text-align: right;
+    font-size: 14px;
+}
+
+#loonstrook table th:first-child,
+#loonstrook table td:first-child {
+    text-align: left;
+}
+
+#loonstrook table tfoot tr {
+    background-color: #f5f5f5;
+}
+
+#loonstrook .gegevens {
+    position: absolute;
+    top: 200mm;
+    width: 100%;
+    font-size: 90%;
+}
+
+#loonstrook .gegevens .col-xs-4 .col-xs-6:last-child {
+    text-align: right;
+}
+
+.pre {
+    white-space: pre-wrap;
+}
+
+.chart {
+    height: 25%;
+    min-height: 150px;
+    float: left;
+}
+
+.chart canvas {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+@media print {
+    .main {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background: green;
+        page-break-after: always;
+    }
+    
+    .main:last-child {
+        page-break-after: never;
+    }
+}
